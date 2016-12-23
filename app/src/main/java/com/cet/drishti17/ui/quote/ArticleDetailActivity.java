@@ -1,9 +1,9 @@
-package de.andreasschrade.androidtemplate.ui.quote;
+package com.cet.drishti17.ui.quote;
 
 import android.os.Bundle;
 
-import de.andreasschrade.androidtemplate.R;
-import de.andreasschrade.androidtemplate.ui.base.BaseActivity;
+import com.cet.drishti17.R;
+import com.cet.drishti17.ui.base.BaseActivity;
 
 /**
  * Simple wrapper for {@link ArticleDetailFragment}

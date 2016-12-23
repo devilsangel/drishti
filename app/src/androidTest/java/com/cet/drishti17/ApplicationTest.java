@@ -1,4 +1,4 @@
-package de.andreasschrade.androidtemplate;
+package com.cet.drishti17;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

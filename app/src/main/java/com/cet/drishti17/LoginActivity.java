@@ -1,9 +1,8 @@
-package de.andreasschrade.androidtemplate;
+package com.cet.drishti17;
 
 import android.content.Intent;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,8 +12,8 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import de.andreasschrade.androidtemplate.ui.base.BaseActivity;
-import de.andreasschrade.androidtemplate.ui.quote.ListActivity;
+import com.cet.drishti17.ui.base.BaseActivity;
+import com.cet.drishti17.ui.quote.ListActivity;
 
 public class LoginActivity extends BaseActivity{
 

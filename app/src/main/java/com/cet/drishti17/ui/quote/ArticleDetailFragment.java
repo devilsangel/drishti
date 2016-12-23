@@ -1,4 +1,4 @@
-package de.andreasschrade.androidtemplate.ui.quote;
+package com.cet.drishti17.ui.quote;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -15,10 +15,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import butterknife.Bind;
-import de.andreasschrade.androidtemplate.R;
-import de.andreasschrade.androidtemplate.dummy.DummyContent;
-import de.andreasschrade.androidtemplate.ui.base.BaseActivity;
-import de.andreasschrade.androidtemplate.ui.base.BaseFragment;
+import com.cet.drishti17.R;
+import com.cet.drishti17.dummy.DummyContent;
+import com.cet.drishti17.ui.base.BaseActivity;
+import com.cet.drishti17.ui.base.BaseFragment;
 
 /**
  * Shows the quote detail page.

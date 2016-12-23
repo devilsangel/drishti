@@ -1,4 +1,4 @@
-package de.andreasschrade.androidtemplate.ui.base;
+package com.cet.drishti17.ui.base;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import de.andreasschrade.androidtemplate.R;
-import de.andreasschrade.androidtemplate.ui.SettingsActivity;
-import de.andreasschrade.androidtemplate.ui.ViewSamplesActivity;
-import de.andreasschrade.androidtemplate.ui.quote.ListActivity;
+import com.cet.drishti17.R;
+import com.cet.drishti17.ui.SettingsActivity;
+import com.cet.drishti17.ui.ViewSamplesActivity;
+import com.cet.drishti17.ui.quote.ListActivity;
 
-import static de.andreasschrade.androidtemplate.util.LogUtil.logD;
-import static de.andreasschrade.androidtemplate.util.LogUtil.makeLogTag;
+import static com.cet.drishti17.util.LogUtil.logD;
+import static com.cet.drishti17.util.LogUtil.makeLogTag;
 
 /**
  * The base class for all Activity classes.

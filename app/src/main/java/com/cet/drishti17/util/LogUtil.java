@@ -1,4 +1,4 @@
-package de.andreasschrade.androidtemplate.util;
+package com.cet.drishti17.util;
 
 import android.util.Log;
 

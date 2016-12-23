@@ -1,4 +1,4 @@
-package de.andreasschrade.androidtemplate.ui.base;
+package com.cet.drishti17.ui.base;
 
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
-import de.andreasschrade.androidtemplate.util.LogUtil;
+import com.cet.drishti17.util.LogUtil;
 
-import static de.andreasschrade.androidtemplate.util.LogUtil.makeLogTag;
+import static com.cet.drishti17.util.LogUtil.makeLogTag;
 
 /**
  * The base class for all fragment classes.
