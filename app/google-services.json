@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "6148791422",
+    "project_id": "firebase-drishti17"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6148791422:android:5aef5c3aee2bc2a8",
+        "android_client_info": {
+          "package_name": "com.cet.drishti17"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6148791422-ieducc1ehl2odhbnv4l75oqrisdpfjhf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cet.drishti17",
+            "certificate_hash": "5093A08D89BF3E8806345CBC8D8D1AA33971477A"
+          }
+        },
+        {
+          "client_id": "6148791422-9vcghq4edlgaj4d14784ceric1rbbl87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6TZ1vQv3TxG0DJIurjM0iMk-3mzKS9Hg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

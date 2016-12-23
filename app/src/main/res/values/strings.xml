@@ -9,8 +9,7 @@
     <string name="samples_subhead">Hello Subhead</string>
     <string name="samples_hint_username">Username</string>
     <string name="samples_hint_email">E-Mail</string>
-
-
+    <string name="clientID">877443367802-40q3bs727he4kui9kn9o3nfjt6vog3ni.apps.googleusercontent.com</string>
     <string name="navigation_title">My navigation title</string>
     <string name="navigation_quotes">Quotes</string>
     <string name="navigation_samples">Samples</string>
