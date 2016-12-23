@@ -27,7 +27,6 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
         setupToolbar();
 
         if (isTwoPaneLayoutUsed()) {
