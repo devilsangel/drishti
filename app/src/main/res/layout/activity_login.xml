@@ -36,16 +36,16 @@
             android:layout_height="match_parent">
 
             <Button
-                android:text="Facebook"
+                android:text="Logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/fb"
+                android:id="@+id/logout"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:background="?android:attr/colorPrimaryDark"
                 android:textColor="#fff"/>
 
             <Button
-                android:text="Google+"
+                android:text="Sigin With G+ or FB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/gplus"
