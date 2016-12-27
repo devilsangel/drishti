@@ -19,6 +19,7 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 import com.cet.drishti17.ui.base.BaseActivity;
 import com.cet.drishti17.ui.quote.ListActivity;
 import com.firebase.ui.auth.AuthUI;
@@ -37,19 +38,20 @@ import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class LoginActivity extends BaseActivity{
+public class LoginActivity extends BaseActivity {
 
     GoogleSignInOptions gso;
     GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 0;
     FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         setupToolbar();
-        auth=FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         try {
             PackageInfo info = getPackageManager().getPackageInfo("com.cet.drishti17", PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
@@ -64,8 +66,9 @@ public class LoginActivity extends BaseActivity{
 
         }
     }
+
     @OnClick(R.id.logout)
-    public void logOut(){
+    public void logOut() {
         AuthUI.getInstance()
                 .signOut(this)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -76,35 +79,35 @@ public class LoginActivity extends BaseActivity{
                                        }
                 );
     }
+
     @OnClick(R.id.gplus)
-    public void signIn()
-    {
-        if(auth.getCurrentUser()!=null){
+    public void signIn() {
+        if (auth.getCurrentUser() != null) {
             //user already authenticated
-            Toast.makeText(getApplicationContext(),"Logged In Already",Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            startActivityForResult(AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setProviders(
-                            AuthUI.FACEBOOK_PROVIDER,
-                            AuthUI.GOOGLE_PROVIDER)
-                    .setLogo(R.drawable.p3)
-                    .setTheme(R.style.Base_Theme)
-                    .build(),RC_SIGN_IN);
+            Toast.makeText(getApplicationContext(), "Logged In Already", Toast.LENGTH_SHORT).show();
+        } else {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addApi(Auth.GOOGLE_SIGN_IN_API).build();
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.default_web_client_id))
+                    .requestEmail()
+                    .build();
+            Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+            startActivityForResult(signInIntent, RC_SIGN_IN);
         }
     }
+
     private void setupToolbar() {
-        final ActionBar ab = getActionBarToolbar();
-        ab.hide();
+//        final ActionBar ab = getActionBarToolbar();
+//        ab.hide();
     }
+
     @OnClick(R.id.guest)
-    public void guest()
-    {
-        Intent intent=new Intent(LoginActivity.this, ListActivity.class);
+    public void guest() {
+        Intent intent = new Intent(LoginActivity.this, ListActivity.class);
         startActivity(intent);
     }
+
     @Override
     public boolean providesActivityToolbar() {
         return true;
@@ -135,20 +138,23 @@ public class LoginActivity extends BaseActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==RC_SIGN_IN)
-        {
-            if(resultCode==RESULT_OK){
-                //user logged in
-                Log.d("AuthNew",auth.getCurrentUser().getEmail());
-                Intent intent=new Intent(LoginActivity.this,ListActivity.class);
-                intent.putExtra("Data",auth.toString());
-                startActivity(intent);
+        // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            if (result.isSuccess()) {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = result.getSignInAccount();
+                //complete this
+            } else {
+                // Google Sign In failed, update UI appropriately
+                // ...
             }
         }
     }
 
     public static class SettingsFragment extends PreferenceFragment {
-        public SettingsFragment() {}
+        public SettingsFragment() {
+        }
 
         @Override
         public void onCreate(Bundle savedInstanceState) {

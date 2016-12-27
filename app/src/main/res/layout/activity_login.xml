@@ -9,16 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#000">
-
-        <include layout="@layout/include_toolbar" />
+        android:background="#000"
+        android:orientation="vertical">
 
 
         <RelativeLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="200dp">
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
@@ -31,37 +30,38 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
-                android:text="Logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/logout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:background="?android:attr/colorPrimaryDark"
-                android:textColor="#fff"/>
+                android:background="@color/theme_primary_dark"
+                android:text="Logout"
+                android:textColor="#fff" />
 
             <Button
-                android:text="Sigin With G+ or FB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/gplus"
-                android:textColor="#fff"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="10dp"
                 android:background="@android:color/holo_red_light"
-                android:layout_marginTop="10dp" />
+                android:text="Sigin With G+"
+                android:textColor="#fff" />
 
             <Button
-                android:text="Continue As Guest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#fff"
                 android:id="@+id/guest"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:background="@android:color/holo_green_light" />
+                android:background="@android:color/holo_green_light"
+                android:text="Continue As Guest"
+                android:textColor="#fff" />
 
         </LinearLayout>
 
