@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.cet.drishti17.LoginActivity;
 import com.cet.drishti17.R;
 import com.cet.drishti17.ui.SettingsActivity;
 import com.cet.drishti17.ui.ViewSamplesActivity;
@@ -94,7 +95,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             closeDrawer();
             return;
         }
-
         goToNavDrawerItem(itemId);
     }
 
@@ -114,6 +114,10 @@ public abstract class BaseActivity extends AppCompatActivity {
             case R.id.nav_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
                 break;
+            case R.id.nav_logout:
+                startActivity(new Intent(this, LoginActivity.class));
+                break;
+
         }
     }
 

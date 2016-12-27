@@ -24,6 +24,10 @@
             <item
                 android:icon="@drawable/ic_dashboard"
                 android:title="@string/navigation_dummy_item_2" />
+            <item
+                android:icon="@drawable/ic_action_settings"
+                android:title="Logout"
+                android:id="@+id/nav_logout"/>
         </menu>
     </item>
 

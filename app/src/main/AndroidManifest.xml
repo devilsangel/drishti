@@ -10,6 +10,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Main">
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id"/>
         <activity android:name="com.cet.drishti17.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

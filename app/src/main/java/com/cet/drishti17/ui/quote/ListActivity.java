@@ -3,21 +3,26 @@ package com.cet.drishti17.ui.quote;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.cet.drishti17.LoginActivity;
 import com.cet.drishti17.R;
 import com.cet.drishti17.dummy.DummyContent;
 import com.cet.drishti17.ui.base.BaseActivity;
 import com.cet.drishti17.util.LogUtil;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Lists all available quotes. This Activity supports a single pane (= smartphones) and a two pane mode (= large screens with >= 600dp width).
  *
  * Created by Andreas Schrade on 14.12.2015.
  */
-public class ListActivity extends BaseActivity implements ArticleListFragment.Callback {
+public class ListActivity extends LoginActivity implements ArticleListFragment.Callback{
     /**
      * Whether or not the activity is running on a device with a large screen
      */
@@ -28,18 +33,15 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         setupToolbar();
-
         if (isTwoPaneLayoutUsed()) {
             twoPaneMode = true;
             LogUtil.logD("TEST","TWO POANE TASDFES");
             enableActiveItemState();
         }
-
         if (savedInstanceState == null && twoPaneMode) {
             setupDetailFragment();
         }
     }
-
     /**
      * Called when an item has been selected
      *
@@ -58,7 +60,6 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
             startActivity(detailIntent);
         }
     }
-
     private void setupToolbar() {
         final ActionBar ab = getActionBarToolbar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
